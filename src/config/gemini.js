@@ -6,6 +6,7 @@
  * See the getting started guide for more information
  * https://ai.google.dev/gemini-api/docs/get-started/node
  */
+import APIkey from "./apiKey";
 
 import {
   GoogleGenerativeAI,
@@ -14,7 +15,7 @@ import {
 } from "@google/generative-ai";
 
 //   const apiKey = process.env.GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI("AIzaSyBuU8xQDJXgfzO1EBgpps_NuF1pztifa7s");
+const genAI = new GoogleGenerativeAI(APIkey);
 
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-pro-latest",
